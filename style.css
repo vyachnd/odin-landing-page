@@ -1,5 +1,253 @@
-* {
+@import './colors.css';
+@import './typography.css';
+
+/* Global */
+*, ::before, ::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  background-color: var(--slate-200);
+  width: 100%;
+  height: 100%;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+}
+
+img {
+  display: block;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1024px;
+  padding-left: 24px;
+  padding-right: 24px;
+  margin: 0 auto;
+}
+
+.btn {
+  background-color: var(--blue-600);
+  border-radius: 40px;
+  color: var(--blue-50);
+  font: var(--text-md-base);
+  padding: 8px 40px;
+  transition: background-color .35s ease, color .35s ease;
+}
+.btn:hover {
+  background-color: var(--blue-500);
+  cursor: pointer;
+}
+
+/* Header */
+header {
+  background-color: var(--slate-800);
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid var(--slate-700);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, .24);
+}
+
+header .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+header h1 {
+  color: var(--slate-50);
+  font: var(--text-bl-2xl);
+}
+
+/* Navigation */
+header nav ul {
+  display: flex;
+  gap: 24px;
+}
+
+header nav ul li a {
+  color: var(--slate-400);
+  font: var(--text-md-base);
+  transition: color .35s ease;
+}
+header nav ul li a:hover {
+  color: var(--slate-200);
+}
+
+/* Hero */
+#hero {
+  background-color: var(--slate-800);
+}
+
+#hero .wrapper {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+#hero .hero_article {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 80px;
+}
+#hero .hero_article div {
+  width: 100%;
+}
+
+#hero .hero_article h2 {
+  color: var(--slate-50);
+  font: var(--text-bl-4xl);
+  text-transform: uppercase;
+}
+
+#hero .hero_article p {
+  color: var(--slate-400);
+  font: var(--text-base);
+  margin-top: 4px;
+}
+
+#hero .hero_article .btn {
+  margin-top: 16px;
+}
+
+#hero .hero_article .img-container,
+#hero .hero_article img {
+  border-radius: 16px;
+  width: 100%;
+  max-width: 448px;
+}
+
+/* Information */
+#info {
+  background-color: var(--slate-50);
+}
+
+#info .wrapper {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+#info h3 {
+  color: var(--slate-800);
+  font: var(--text-bl-2xl);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#info ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 40px;
+}
+#info ul li {
+  padding: 8px;
+  border-radius: 16px;
+  transition: background-color .35s ease, box-shadow .35s ease;
+}
+#info ul li:hover {
+  background-color: var(--slate-50);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .08);
+}
+
+#info .info_card {
+  max-width: 160px;
+  min-width: 160px;
+  width: 100%;
+}
+
+#info .info_card img {
+  border-radius: 16px;
+  border: 4px solid var(--blue-600);
+  width: 100%;
+}
+
+#info .info_card p {
+  color: var(--slate-600);
+  width: 100%;
+  margin-top: 8px;
+  font: var(--text-base-sm);
+  text-align: center;
+}
+
+/* Quote */
+#quote .wrapper {
+  padding: 80px 120px;
+}
+
+#quote blockquote {
+  color: var(--slate-600);
+  font: var(--text-base-i2xl);
+}
+
+#quote figcaption {
+  color: var(--slate-700);
+  font: var(--text-bl-base);
+  text-align: right;
+  margin-top: 8px;
+}
+
+/* Subscription */
+#subs {
+  background-color: var(--slate-50);
+}
+
+#subs .wrapper {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+#subs .subs_card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--blue-600);
+  border-radius: 16px;
+  padding: 40px 120px;
+}
+#subs .subs_card h3 {
+  color: var(--slate-50);
+  font: var(--text-bl-xl);
+}
+#subs .subs_card p {
+  color: var(--slate-200);
+  font: var(--text-base);
+}
+
+#subs .subs_card .btn {
+  border: 1px solid var(--blue-50);
+}
+
+/* Footer */
+footer {
+  background-color: var(--slate-800);
+}
+
+footer .wrapper {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+footer p {
+  color: var(--slate-400);
+  font: var(--text-md-base);
+  text-align: center;
 }
